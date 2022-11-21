@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\TemperatureHumidityEntity.cs" />
+    <Compile Include="HttpServer\WebServer.cs" />
     <Compile Include="Mqtt\MqttClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

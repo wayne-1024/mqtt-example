@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using MqttExample.Entity;
+using MqttExample.HttpServer;
 using MqttExample.Mqtt;
 
 namespace MqttExample
@@ -14,6 +15,9 @@ namespace MqttExample
     {
         static async Task Main(string[] args)
         {
+            var server = new WebServer(url: "http://localhost:9001/");
+            server.Start();
+
             // 简单测试mqtt
             // await Test01();
 
@@ -22,8 +26,11 @@ namespace MqttExample
 
             // 循环读取数据发送
             await Test03();
+
+            Console.ReadLine();
         }
 
+        #region MQTT测试用例
         /// <summary>
         /// 简单测试
         /// </summary>
@@ -107,5 +114,8 @@ namespace MqttExample
                 }
             }
         }
+        #endregion
+    
+    
     }
 }
