@@ -79,7 +79,7 @@ namespace MqttExample.Mqtt
         /// <param name="topic">主题</param>
         /// <param name="payload">消息载荷</param>
         /// <param name="contentType">内容（消息载荷）格式</param>
-        public async Task PublishPayload(string topic, string payload, string contentType="application/json")
+        public async Task PublishPayloadAsync(string topic, string payload, string contentType="application/json")
         {
             var applicationMessage = new MqttApplicationMessageBuilder()
                 .WithTopic(topic)
